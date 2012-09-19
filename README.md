@@ -1,4 +1,4 @@
-mie-paa-1
+MIE-PAA
 =========
 
-course MIE-PAA task 1
+course MIE-PAA homework
