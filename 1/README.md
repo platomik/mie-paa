@@ -36,8 +36,15 @@ where,
 
 *Heuristic technique*
 
+The simple greedy heuristic technique uses the cost/weight ratio. That is computed for each item and the items and then sorted by it.
+
+The knapsack is then greedily filled starting with items with the highest ratio, until the first item that cannot be inserted is reached (the knapsack would be overfilled).
+
+An alternative is to skip items that cannot be fitted, continue the search, and try to find a smaller item that yet fits.
 
 ### Brief description of your solution, description of the algorithms used
+
+
 
 ### The experimental results. You are encouraged to use tables, graphs, etc.
 
