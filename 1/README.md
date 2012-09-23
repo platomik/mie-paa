@@ -3,7 +3,7 @@
 
 ## Solving the knapsack problem by brute force and simple heuristic
 
-Problem Statement
+###Problem Statement
 
 Analysis of possible solutions
 
