@@ -17,6 +17,17 @@ All instances are saved in the text files, the files are named knap_n.inst.dat, 
 
 ### Analysis of possible solutions
 
+*Brute force algorithm*
+
+Brute force approach is examining all possible cobinations (for n-size instances = 2^n combinations). The next requirements must be fulfilled:
+
+	w1x1 + w2x2 + … + wnxn < = M 
+	
+	c1x1 + c2x2 + … + cnxn is maximal.
+
+*Heuristic technique*
+
+
 ### Brief description of your solution, description of the algorithms used
 
 ### The experimental results. You are encouraged to use tables, graphs, etc.
