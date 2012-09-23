@@ -17,7 +17,7 @@ All instances are saved in the text files, the files are named knap_n.inst.dat, 
 
 ### Analysis of possible solutions
 
-*Brute force algorithm*
+**Brute force algorithm**
 
 Brute force approach is examining all possible cobinations (for n-size instances = 2^n combinations). And construct a set **X={x1, x2, … ,xn }**, where each xi is 0 or 1, so that:
 
@@ -34,7 +34,7 @@ where,
 	finite set W = {w1, w2, … ,wn } (weights of items)
 	finite set C = {c1, c2, … ,cn } (costs of items)
 
-*Heuristic technique*
+**Heuristic technique**
 
 The simple greedy heuristic technique uses the cost/weight ratio. That is computed for each item and the items and then sorted by it.
 
@@ -44,9 +44,32 @@ An alternative is to skip items that cannot be fitted, continue the search, and 
 
 ### Brief description of your solution, description of the algorithms used
 
+**Brute force technique**
 
+To generate a set *X* of ones and zeros for each item in the instance a very simple trick was used. We know that # of combinations is equal to 2^n, where n - is # of items.
+So if go from 0 to 2^n and convert this decimal numbers to binary view, we will get exatly the set X that we need.
 
+For example, for the instance of 3 items we have 2^3=8 combinations. It means we should go from 0 to 7:
+
+	0 -> X={0,0,0}
+	1 -> X={0,0,1}
+	2 -> X={0,1,0}
+	3 -> X={0,1,1}
+	4 -> X={1,0,0}
+	5 -> X={1,0,1}
+	6 -> X={1,1,0}
+	7 -> X={1,1,1}
+
+In this exhaustive search all requirements mentioned above should fulfilled.
+
+**Heuristic technique**
+
+First of all array with cost/weight ratio must be constructed. Then this array must be sorted. And finally the knapsack must be filled by items step by step from expensive to cheaper. If the knapsack is overloaded when the new item is come in then this item must be left. Procedure is completed when the last item is checked.
+	
 ### The experimental results. You are encouraged to use tables, graphs, etc.
+
+**Brute force technique**
+
 
 ### Conclusions: Interpretation of the results and discussion on the results obtained
 
