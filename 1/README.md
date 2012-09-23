@@ -19,15 +19,15 @@ All instances are saved in the text files, the files are named knap_n.inst.dat, 
 
 *Brute force algorithm*
 
-Brute force approach is examining all possible cobinations (for n-size instances = 2^n combinations). The next requirements must be fulfilled:
+Brute force approach is examining all possible cobinations (for n-size instances = 2^n combinations). And construct a set **X={x1, x2, … ,xn }**, where each xi is 0 or 1, so that:
 
 	w1x1 + w2x2 + … + wnxn < = M 
 	
 	c1x1 + c2x2 + … + cnxn is maximal.
 
-The first requirements garantee that the knapsack is not overloaded. The second one gives max value of the kanpsack.
+The first requirement garantees that the knapsack is not overloaded. The second one gives max value of the kanpsack.
 
-where
+where,
 
 	integer n (# of items)
 	integer M (the capacity of the knapsack)
