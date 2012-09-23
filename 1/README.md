@@ -70,11 +70,14 @@ First of all array with cost/weight ratio must be constructed. Then this array m
 
 **Brute force technique**
 
-Observe the dependency of the computational time on the instance size.
+Observation the dependency of the computational time on the instance size:
 
 <table>
     <tr>
-        <td>Foo</td>
+        <td>Size</td>
+        <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td>
+        <td>Time</td>
+        <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td></td><td></td><td></td><td></td>
     </tr>
 </table>
 
