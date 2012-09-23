@@ -74,10 +74,10 @@ Observation the dependency of the computational time on the instance size:
 
 <table>
     <tr>
-        <td>**Size**</td>
+        <td><strong>Size</strong></td>
         <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><tr>
     <tr>
-        <td>**Time**</td>
+        <td><strong>Time</strong></td>
         <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td></td><td></td><td></td><td></td>
     </tr>
 </table>
