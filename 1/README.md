@@ -25,6 +25,15 @@ Brute force approach is examining all possible cobinations (for n-size instances
 	
 	c1x1 + c2x2 + … + cnxn is maximal.
 
+The first requirements garantee that the knapsack is not overloaded. The second one gives max value of the kanpsack.
+
+where
+
+	integer n (# of items)
+	integer M (the capacity of the knapsack)
+	finite set W = {w1, w2, … ,wn } (weights of items)
+	finite set C = {c1, c2, … ,cn } (costs of items)
+
 *Heuristic technique*
 
 
