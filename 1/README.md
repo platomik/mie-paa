@@ -70,6 +70,13 @@ First of all array with cost/weight ratio must be constructed. Then this array m
 
 **Brute force technique**
 
+Observe the dependency of the computational time on the instance size.
+
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>
 
 ### Conclusions: Interpretation of the results and discussion on the results obtained
 
