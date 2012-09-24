@@ -129,12 +129,8 @@ If the heuristic is so simple and very fast - where "the shoe pinches"? The answ
 
 All programs for the homework #1 have been writen in Perl language and have been deployed on github repository.
 
-Brute force algorithm.
+[Brute force algorithm](https://github.com/platomik/mie-paa/blob/master/1/bruteforce.pl "Brute force algorithm") 
 
-`https://github.com/platomik/mie-paa/blob/master/1/bruteforce.pl`
-
-Heuristic algorithm.
-
-`https://github.com/platomik/mie-paa/blob/master/1/heuristic.pl`
+[Heuristic algorithm](https://github.com/platomik/mie-paa/blob/master/1/heuristic.pl "Heuristic algorithm") 
 
 Error calculations have been done in console line by awk, sed, diff commands. The graph has been plotted in the R project for statistical computing.
