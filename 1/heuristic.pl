@@ -3,7 +3,7 @@
 use strict;
 
 opendir(DIR, '.') or die "Couldn't open directory, $!";
-foreach (sort grep(/^*knap_4.inst.dat$/,readdir(DIR)))
+foreach (sort grep(/^*knap_40.inst.dat$/,readdir(DIR)))
 {
 #    print "$_\n";		# print filename
     open FH,"<$_";

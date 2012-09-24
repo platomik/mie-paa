@@ -104,6 +104,21 @@ We can say that all measured values are the same with observational error.
 
 ### Conclusions: Interpretation of the results and discussion on the results obtained
 
+If the heuristic is so simple and very fast - where "the shoe pinches"? The answer is errors. We need to observe the quality of results, i.e. the average and maximum relative error.
+
+<table>
+    <tr>
+        <td><strong>Size</strong></td>
+        <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><tr>
+    <tr>
+        <td><strong>Avg. error (%)</strong></td>
+        <td>2</td><td>1</td><td>0.5</td><td>0.6</td><td>0.07</td><td>0.05</td><td>0.05</td><td>0.05</td><td>0.04</td><td>0.03</td><td>0.03</td><td>0.02</td>
+    </tr>
+    <tr>
+        <td><strong>Max. relative error (%)</strong></td>
+        <td>36</td><td>11</td><td>9</td><td>8</td><td>7</td><td>4</td><td>10</td><td>2</td><td>3</td><td>5</td><td>8</td><td>2</td>
+    </tr>
+</table>
 
 
 ### Link to the sourcecode.
