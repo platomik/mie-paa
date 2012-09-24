@@ -120,5 +120,21 @@ If the heuristic is so simple and very fast - where "the shoe pinches"? The answ
     </tr>
 </table>
 
+**Conclusions.** 
+*Average error on a set of 50 outcomes is quite good from 2% to almost 0. And it is less for instances with many items.*
+
+*The dispersion or max relative error is very big for the instances with a few items. But for the instances with many items it goes to zero. Which is explicable - make error with many small pieces much harder than with big ones.*
 
 ### Link to the sourcecode.
+
+All programs for the homework #1 have been writen in Perl language and have been deployed on github repository.
+
+Brute force algorithm.
+
+`https://github.com/platomik/mie-paa/blob/master/1/bruteforce.pl`
+
+Heuristic algorithm.
+
+`https://github.com/platomik/mie-paa/blob/master/1/heuristic.pl`
+
+Error calculations have been done in console line by awk, sed, diff commands. The graph has been plotted in the R project for statistical computing.
