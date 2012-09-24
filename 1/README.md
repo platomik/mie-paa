@@ -96,10 +96,14 @@ Observation the dependency of the computational time on the instance size:
         <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><tr>
     <tr>
         <td><strong>Time</strong></td>
-        <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td>16 h</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td>0.10 sec</td><td>0.12 sec</td><td>0.11 sec</td><td>0.15 sec</td><td>0.15 sec</td><td>0.15 sec</td><td>0.13 sec</td><td>0.14 sec</td><td>0.14 sec</td><td>0.13 sec</td><td>0.15 sec</td><td>0.12 sec</td>
     </tr>
 </table>
 
+We can say that all measured values are the same with observational error.
+
 ### Conclusions: Interpretation of the results and discussion on the results obtained
+
+
 
 ### Link to the sourcecode.
