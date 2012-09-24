@@ -84,7 +84,7 @@ Observation the dependency of the computational time on the instance size:
 
 Due to lack of computational power it was impossible to complete this table. But the trend has exponential form and it's quite obviously.
 
-![Brute force time](https://github.com/platomik/mie-paa/blob/master/1/bruteforcetime.jpg)
+![Brute force time](https://raw.github.com/platomik/mie-paa/master/1/bruteforcetime.jpg)
 
 **Heuristic technique**
 
