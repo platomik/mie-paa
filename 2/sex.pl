@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
-@V = (2, 3);	 	#capacities
-@T = (1, 1);		#target
-@S = (2, 0);		#initial
+@V = (14,10,6,2,8);	 	#capacities
+@T = (12,6,4,1,8);		#target
+@S = (0,0,1,0,0);		#initial
 #@cur=(0, 0, 0, 0);		#current
 $n = $#S+1;
 
@@ -21,7 +21,6 @@ sub print_arr{
 sub is_solution {
 	my(@AoA) = @_;
     my $ok = 2;    
-#    print @AoA,"\n";
 	for (my $i = 0; $i <= $#T; $i++) {
     	  if ( $T[$i] == $AoA[$i]) { $ok=1; } else { $ok=2; last; }; 
 	}
@@ -36,13 +35,12 @@ sub is_solution {
 #check uniqueness of element in the tree.
 sub is_duplicate{
    my(@y) = @_;
-   my $ok = 2;
+   my $dup = 0;
 	for (my $i = 0; $i <= $#Q; $i++) {
-	   	for (my $j = 0; $j <= $#{$Q[$i]}; $j++) {
-    	  if ( $Q[$i][$j] == @y[$j]) { $ok=1; } else { $ok=2; last; }; 
-    	}
+		if ("@y" eq "@{$Q[$i]}") { $dup=$i+1;}
     }
-   if ($ok!=1) { unshift(@Q, [@y]);
+   if ($dup==0) { 
+	   	unshift(@Q, [@y]);
    }    
 
 }
@@ -89,25 +87,12 @@ sub go_down {
 }
 
 @Q=[@S];	#set root element from the initial array
-#go_down(@S);
-#print_arr(@Q);
-#@next = pop @Q;
-#print_arr(@next);
 
-#	for (my $i = 0; $i <= $#Q; $i++) {
-#$i=0;
-#		print @{$Q[$#Q-$i]},"\n";
-#		go_down(@{$Q[$#Q-$i]});
-#		print_arr(@Q);
+for (my $i = 0; $i <= $#Q; $i++) {
+#	print @{$Q[$#Q-$i]},"\n";
+	print $i+1,"\n";
+	go_down(@{$Q[$#Q-$i]});
+}
 
-@Q=([2,0],[0,0],[0,0],[2,0]);
-
-$i=1;
-		print @{$Q[$#Q-$i]},"\n";
-		go_down(@{$Q[$#Q-$i]});
-		print_arr(@Q);
-		
-#		if ($i==1) {unshift(@Q, [1,2,3,4]);}
-#	}
-
-print "\n";
+print_arr(@Q);	
+#print "\n";
