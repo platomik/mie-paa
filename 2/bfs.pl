@@ -1,16 +1,21 @@
 #!/usr/bin/perl
 
-@V = (3,2,3);	 	#capacities
-@T = (2,2,2);		#target
-@S = (0,0,0);		#initial
+@V = (14, 10, 6, 2, 8);	 	#capacities
+@T = (12, 6, 4, 1, 8);		#target
+@S = (0, 0, 1, 0, 0);		#initial
+
+#@V = (3, 2, 3);	 	#capacities
+#@T = (0, 1, 0);		#target
+#@S = (1, 1, 1);		#initial
+
+
 $n = $#S+1;
-my $counter;		#element counter
 
 #here is just array printing
 sub print_arr{
 	my(@AoA) = @_;
 	for (my $i = 0; $i <= $#AoA; $i++) {
-		print $i+1, ". ";
+#		print $i+1, ". ";
 	   for (my $j = 0; $j <= $#{$AoA[$i]}; $j++) {
     	  print $AoA[$i][$j], " "; 
     	}
@@ -26,9 +31,18 @@ sub is_solution {
 	}
 	if ($ok==1) {
 		unshift(@Q, [@AoA]);
-		print "we found a solution\n"; 
-		print_arr(@Q);
-		print "elements: ",$counter,"; depth: ",int(log($counter*29/30+1)/log(30)+0.5)+1,"\n";
+	   	push(@R, [$#Q,$id]);		
+		print "We have found a solution after visiting ",$#Q+1," nodes!\n"; 
+		print "Solution tree looks like: \n";
+#		print_arr(@R);
+		$child=$#Q;
+		while ($father ne "Null") {
+			$cc++;
+			print_arr($Q[$#Q-$child])." ";
+			$father=$R[$child][1];
+			$child=$father;
+		}
+		print "Depth of the solution tree is: $cc \n";
 		exit;
 	}
 }
@@ -42,6 +56,8 @@ sub is_duplicate{
     }
    if ($dup==0) { 
 	   	unshift(@Q, [@y]);
+#	   	print "father: ".$id,"; child: ", $#Q,"\n";
+	   	push(@R, [$#Q,$id]);
    }    
 
 }
@@ -49,19 +65,18 @@ sub is_duplicate{
 # n^2+n branches from a bud
 sub go_down {
  my(@cur) = @_;	
+ @father=@cur;
 # print @cur; print "\n\n";
   for ($i=0; $i<$n; $i++){
 
 	#fill bucket one by one
 	$left=$cur[$i];
 	$cur[$i]=$V[$i];
-	$counter++;
 	is_solution(@cur);
 	is_duplicate(@cur);	
 	
 	#empty bucket one by one
 	$cur[$i]=0;
-	$counter++;
 	is_solution(@cur);
 	is_duplicate(@cur);
 	$cur[$i]=$left;
@@ -81,7 +96,6 @@ sub go_down {
 			$cur[$right_id]=$V[$right_id];
 			$cur[$left_id]=$left+$right-$V[$right_id];
 		}
-		$counter++;		
 		is_solution(@cur);
 		is_duplicate(@cur);
 		$cur[$left_id]=$left;
@@ -92,10 +106,11 @@ sub go_down {
 
 @Q=[@S];	#set root element from the initial array
 
-for (my $i = 0; $i <= $#Q; $i++) {
+unshift(@R, [0,"Null"]); # format (father;child)
+
+for ($id = 0; $id <= $#Q; $id++) {
 #	print "element ",@{$Q[$#Q-$i]},"\n";
-	print $i+1,", ";
-	go_down(@{$Q[$#Q-$i]});
+	print " ",$id+1,"\n";
+	go_down(@{$Q[$#Q-$id]});
 }
-print "number of generated elements $counter\n";
 print "\n";
