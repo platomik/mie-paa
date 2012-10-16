@@ -35,6 +35,7 @@ So let's look at the table with results of DFS algorithm implementing.
     </tr>
 </table>
 
+As we can see just swapping two operation leads to big changes in the output results.
 
 ### Link to the sourcecode.
 
