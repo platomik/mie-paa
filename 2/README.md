@@ -7,8 +7,6 @@
 
 *The basics*
 
-The **knapsack problem** or **rucksack problem** is a problem in combinatorial optimization: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
-
 ### Lengths of the paths for the individual examples
 
 
@@ -17,25 +15,31 @@ The **knapsack problem** or **rucksack problem** is a problem in combinatorial o
 	
 ### Voluntarily you can solve the problem using depth-first search (DFS)
 
+The DFS solution search algorithm is based on the luck mostly. Because it will be vital decision which branch has been choosen. That is operations order in the sequence is important and starting element as well. As opposed to the BFS where we can get the same depth for any operations order, in the DFS the depth will be different and dispersion is very big.
+
+The DFS can be easly transformed from BFS by changing FIFO queue to LIFO queues for roundabout way through the nodes.
+
+So let's look at the table with results of DFS algorithm implementing.
+
 <table>
+	<tr>
+		<td></td><td>Depth of the path</td><td>Number of visted nodes</td>
+	</tr>
     <tr>
-        <td><strong>Size</strong></td>
-        <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><tr>
+        <td><strong>Operation of filling bucket BEFORE operation of emptying </strong></td>
+        <td>746</td><td>4125</td>
     <tr>
-        <td><strong>Time</strong></td>
-        <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td>16 h</td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <tr>
+        <td><strong>Operation of filling bucket AFTER operation of emptying </strong></td>
+        <td>2138</td><td>8188</td>
     </tr>
 </table>
 
 
-![Brute force time](https://raw.github.com/platomik/mie-paa/master/1/bruteforcetime.jpg)
-
 ### Link to the sourcecode.
 
-All programs for the homework #1 have been writen in Perl language and have been deployed on github repository.
+All programs for the homework #2 have been writen in Perl language and have been deployed on github repository.
 
-[Brute force algorithm](https://github.com/platomik/mie-paa/blob/master/1/bruteforce.pl "Brute force algorithm") 
+[DFS algorithm](https://github.com/platomik/mie-paa/blob/master/2/dfs.pl "DFS algorithm") 
 
-[Heuristic algorithm](https://github.com/platomik/mie-paa/blob/master/1/heuristic.pl "Heuristic algorithm") 
-
-Error calculations have been done in console line by awk, sed, diff commands. The graph has been plotted in the R project for statistical computing.
+[BFS algorithm](https://github.com/platomik/mie-paa/blob/master/2/bfs.pl "BFS algorithm") 
