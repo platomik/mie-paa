@@ -1,12 +1,12 @@
 #!/usr/bin/perl
 
 @V = (14, 10, 6, 2, 8);	 	#capacities
-@T = (12, 6, 4, 1, 8);		#target
+@T = (12,6,4,1,8);		#target
 @S = (0, 0, 1, 0, 0);		#initial
 
-#@V = (3, 2, 3);	 	#capacities
-#@T = (0, 1, 0);		#target
-#@S = (1, 1, 1);		#initial
+#@V = (5, 4, 3);	 	#capacities
+#@T = (1, 2, 0);		#target
+#@S = (0, 0, 0);		#initial
 
 
 $n = $#S+1;
@@ -55,10 +55,11 @@ sub is_duplicate{
 		if ("@y" eq "@{$Q[$i]}") { $dup=$i+1;}
     }
    if ($dup==0) { 
-#   	print @y,"\n";
+#	   	print @y,"\n";
 	   	push(@Q, [@y]);
 #	   	print "father: ".$id,"; child: ", $#Q,"\n";
 	   	push(@R, [$#Q,$id]);
+	   	$num++;
    }    
 
 }
@@ -66,8 +67,9 @@ sub is_duplicate{
 # n^2+n branches from a bud
 sub go_down {
  my(@cur) = @_;	
+ $num=0;
  @father=@cur;
-# print @cur; print "\n\n";
+# print "current",@cur; print "\n\n";
   for ($i=0; $i<$n; $i++){
 
 	#fill bucket one by one
@@ -109,11 +111,14 @@ sub go_down {
 
 push(@R, [0,"Null"]); # format (father;child)
 
-for (my $i = 0; $i <= $#Q; $i++) {
-#	print "element ",@{$Q[$#Q-$i]},"\n";
-#	print "element ",@{$Q[$#Q]},"\n";
-	print " ",$i+1,"\n";
-	$id=$#Q;
-	go_down(@{$Q[$#Q]});
-}
+	$num=1;
+	$z=0;
+	while ($num != 0) {
+		print " ",$ccc++,"\n";
+		$id=$#Q;
+		go_down(@{$Q[$#Q-$z]});
+		if ($num==0){$z++;$num=-1;}else{$z=0;}
+#		print "num: $num; i: $z\n";
+#		if ($num==0){print "oops"; print_arr(@Q);}
+	}
 print "\n";
