@@ -7,10 +7,8 @@
 
 *The basics*
 
-### Lengths of the paths for the individual examples
 
-
-### Number of visited state space nodes for the individual instances. It is a good measure of the quality of the heuristic. Both for your heuristic and BFS.
+### Lengths of the paths and number of visited state space nodes for the individual instances. It is a good measure of the quality of the heuristic. Both for your heuristic and BFS.
 
 <table>
 	<tr>
