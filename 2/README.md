@@ -33,7 +33,7 @@
     <tr>
     <tr>
         <td><strong>21</strong></td>
-        <td></td><td></td><td></td><td></td>
+        <td>17</td><td>49350</td><td></td><td></td>
     <tr>
     <tr>
         <td><strong>22</strong></td>
@@ -53,15 +53,15 @@
     <tr>
     <tr>
         <td><strong>31</strong></td>
-        <td></td><td></td><td></td><td></td>
+        <td>15</td><td>59707</td><td></td><td></td>
     <tr>
     <tr>
         <td><strong>32</strong></td>
-        <td></td><td></td><td></td><td></td>
+        <td>13</td><td>54939</td><td></td><td></td>
     <tr>
     <tr>
         <td><strong>33</strong></td>
-        <td></td><td></td><td></td><td></td>
+        <td>11</td><td>43489</td><td></td><td></td>
     <tr>
     <tr>
         <td><strong>34</strong></td>
