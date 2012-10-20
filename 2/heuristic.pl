@@ -36,7 +36,7 @@ sub prior_arr{
 		$left=$Gen[$i][$n+1];
 		$right=$Gen[$i+1][$n+1];
 	
-		if ($left > $right) {;
+		if ($left < $right) {;
 			$tmp=$Gen[$i];
 			$Gen[$i]=$Gen[$i+1];
 			$Gen[$i+1]=$tmp;
