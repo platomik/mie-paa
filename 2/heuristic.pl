@@ -4,6 +4,7 @@
 @T = (12,6,4,1,8);		#target
 @S = (0,0,1,0,0);		#initial
 
+
 $n = $#S+1;
 
 #here is just array printing
@@ -35,7 +36,7 @@ sub prior_arr{
 		$left=$Gen[$i][$n+1];
 		$right=$Gen[$i+1][$n+1];
 	
-		if ($left < $right) {;
+		if ($left > $right) {;
 			$tmp=$Gen[$i];
 			$Gen[$i]=$Gen[$i+1];
 			$Gen[$i+1]=$tmp;
@@ -59,7 +60,7 @@ sub is_solution {
 	if ($ok==1) {
 		push(@Q, [@AoA]);
 	   	push(@R, [$#Q,$id]);		
-		print "We have found a solution after visiting ",$#Q+1," nodes!\n"; 
+#		print "We have found a solution after visiting ",$#Q+1," nodes!\n"; 
 		print "Solution tree looks like: \n";
 #		print_arr(@R);
 		$child=$#Q;
