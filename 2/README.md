@@ -48,27 +48,27 @@ Interesting question - which bucket to choose as the first one? Suggestion to ch
 <table>
 	<tr>
 		<td></td><td>Depth of the path. BFS algorithm.</td><td>Number of visted nodes. BFS algorithm.</td>
-		<td>Depth of the path. Heuristic algorithm.</td><td>Number of visted nodes. Heuristic algorithm.</td>			<td>Depth of the path. "Divide at impera" algorithm.</td><td>Number of visted nodes. "Divide at impera" algorithm.</td>	
+		<td>Number of visted nodes. Heuristic algorithm.</td><td>Depth of the path. Heuristic algorithm.</td>			<td>Depth of the path. "Divide at impera" algorithm.</td><td>Number of visted nodes. "Divide at impera" algorithm.</td>	
 	</tr>
     <tr>
         <td><strong>11</strong></td>
         <td>11</td><td>8992</td><td>3194</td><td>17</td>
-        <td></td><td></td>
+        <td>11</td><td>893</td>
     <tr>
     <tr>
         <td><strong>12</strong></td>
         <td>9</td><td>8055</td><td>2869</td><td>16</td>
-        <td></td><td></td>
+        <td>10</td><td>893</td>
     <tr>
     <tr>
         <td><strong>13</strong></td>
         <td>9</td><td>8106</td><td>278</td><td>13</td>
-        <td></td><td></td>
+        <td>9</td><td>785</td>
     <tr>
     <tr>
         <td><strong>14</strong></td>
         <td>4</td><td>170</td><td>2177</td><td>8</td>
-        <td></td><td></td>
+        <td>5</td><td>59</td>
     <tr>
     <tr>
         <td><strong>21</strong></td>
