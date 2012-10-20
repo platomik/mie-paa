@@ -45,9 +45,10 @@ sub prior_arr{
     }
 
 	#remove priority
-   for (my $i = 0; $i <= $#Gen; $i++) {
+    for (my $i = 0; $i <= $#Gen; $i++) {
+    	push(@R, [$id+$i,$id]);
 		delete $Gen[$i][$n+1];
-   }
+    }
 }
 
 
@@ -85,7 +86,7 @@ sub is_duplicate{
    if ($dup==0) { 
 	   	push(@Gen, [@y]);
 #	   	print "father: ".$id,"; child: ", $#Q,"\n";
-	   	push(@R, [$#Q,$id]);
+#	   	push(@R, [$#Q,$id]);
    }    
 
 }
@@ -143,16 +144,8 @@ sub go_down {
 push(@R, [0,"Null"]); # format (father;child)
 
 for ($id = 0; $id <= $#Q; $id++) {
-
-#	print "element ",@{$Q[$id]},"\n";
 	print " ",$id+1,"\n";
 	go_down(@{$Q[$id]});
-#	print "Q";print_arr(@Q);
-#	print "\n";
- #   print_arr(@Gen);
-#	print "\n";    
 	splice(@Q,$id+1,0,@Gen);
-#	print_arr(@Q);
-
 }
 print "\n";
