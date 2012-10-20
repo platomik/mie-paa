@@ -52,17 +52,17 @@ Interesting question - which bucket to choose as the first one? Suggestion to ch
 	</tr>
     <tr>
         <td><strong>11</strong></td>
-        <td>11</td><td>8992</td><td>3184</td><td>25</td>
+        <td>11</td><td>8992</td><td>3194</td><td>17</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>12</strong></td>
-        <td>9</td><td>8055</td><td>2869</td><td>22</td>
+        <td>9</td><td>8055</td><td>2869</td><td>16</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>13</strong></td>
-        <td>9</td><td>8106</td><td>278</td><td>10</td>
+        <td>9</td><td>8106</td><td>278</td><td>13</td>
         <td></td><td></td>
     <tr>
     <tr>
@@ -72,17 +72,17 @@ Interesting question - which bucket to choose as the first one? Suggestion to ch
     <tr>
     <tr>
         <td><strong>21</strong></td>
-        <td>17</td><td>49350</td><td></td><td></td>
+        <td>17</td><td>49350</td><td>29814</td><td>66</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>22</strong></td>
-        <td>13</td><td>40064</td><td></td><td></td>
+        <td>13</td><td>40064</td><td>33171</td><td>73</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>23</strong></td>
-        <td>12</td><td>31388</td><td></td><td></td>
+        <td>12</td><td>31388</td><td>18910</td><td>38</td>
         <td></td><td></td>
     <tr>
     <tr>
@@ -92,37 +92,37 @@ Interesting question - which bucket to choose as the first one? Suggestion to ch
     <tr>
     <tr>
         <td><strong>25</strong></td>
-        <td>8</td><td>1917</td><td>1152</td><td>18</td>
+        <td>8</td><td>1917</td><td>1152</td><td>22</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>31</strong></td>
-        <td>15</td><td>59707</td><td></td><td></td>
+        <td>15</td><td>59707</td><td>22109</td><td>33</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>32</strong></td>
-        <td>13</td><td>54939</td><td></td><td></td>
+        <td>13</td><td>54939</td><td>26790</td><td>26</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>33</strong></td>
-        <td>11</td><td>43489</td><td></td><td></td>
+        <td>11</td><td>43489</td><td>16704</td><td>33</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>34</strong></td>
-        <td>6</td><td>1013</td><td></td><td></td>
+        <td>6</td><td>1013</td><td>598</td><td>11</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>35</strong></td>
-        <td>8</td><td>7464</td><td></td><td></td>
+        <td>8</td><td>7464</td><td>1512</td><td>12</td>
         <td></td><td></td>
     <tr>
     <tr>
         <td><strong>36</strong></td>
-        <td>10</td><td>27532</td><td></td><td></td>
+        <td>10</td><td>27532</td><td>11310</td><td>33</td>
         <td></td><td></td>
     <tr>
 
