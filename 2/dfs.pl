@@ -1,12 +1,12 @@
 #!/usr/bin/perl
 
-@V = (14, 10, 6, 2, 8);	 	#capacities
-@T = (12,6,4,1,8);		#target
-@S = (0, 0, 1, 0, 0);		#initial
+#@V = (14, 10, 6, 2, 8);	 	#capacities
+#@T = (12,6,4,1,8);		#target
+#@S = (0, 0, 1, 0, 0);		#initial
 
-#@V = (5, 4, 3);	 	#capacities
-#@T = (1, 2, 0);		#target
-#@S = (0, 0, 0);		#initial
+@V = (5, 4, 3);	 	#capacities
+@T = (1, 2, 0);		#target
+@S = (0, 0, 0);		#initial
 
 
 $n = $#S+1;
