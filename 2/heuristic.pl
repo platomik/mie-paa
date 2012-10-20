@@ -4,7 +4,6 @@
 @T = (12,6,4,1,8);		#target
 @S = (0,0,1,0,0);		#initial
 
-
 $n = $#S+1;
 
 #here is just array printing
@@ -61,17 +60,17 @@ sub is_solution {
 	if ($ok==1) {
 		push(@Q, [@AoA]);
 	   	push(@R, [$#Q,$id]);		
-#		print "We have found a solution after visiting ",$#Q+1," nodes!\n"; 
-		print "Solution tree looks like: \n";
+		print "We have found a solution after visiting ",$id+1," nodes!\n"; 
+#		print "Solution tree looks like: \n";
 #		print_arr(@R);
-		$child=$#Q;
-		while ($father ne "Null") {
-			$cc++;
-			print_arr($Q[$#Q-$child])." ";
-			$father=$R[$child][1];
-			$child=$father;
-		}
-		print "Depth of the solution tree is: $cc \n";
+#		$child=$#Q;
+#		while ($father ne "Null") {
+#			$cc++;
+#			print_arr($Q[$#Q-$child])." ";
+#			$father=$R[$child][1];
+#			$child=$father;
+#		}
+#		print "Depth of the solution tree is: $cc \n";
 		exit;
 	}
 }
