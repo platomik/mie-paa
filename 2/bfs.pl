@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
-@V = (14, 10, 6, 2, 8);	 	#capacities
-@T = (12, 6, 4, 1, 8);		#target
-@S = (0, 0, 1, 0, 0);		#initial
+@V = (10,12,3,8);	 	#capacities
+@T = (0,7,0,7);		#target
+@S = (0, 0, 0, 0);		#initial
 
 #@V = (3, 2, 3);	 	#capacities
 #@T = (0, 1, 0);		#target
