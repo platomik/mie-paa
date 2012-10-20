@@ -7,15 +7,15 @@
 
 *Heuristic basics*
 
-We can base heuristic algorithm on priority queue. Just a small modification for the general BFS algorithm will give us more smarter and faster algorithm. 
+We can base heuristic algorithm on a priority queue. Just a small modification for the general BFS algorithm will give us more smarter and faster algorithm. 
 
-*How to calculate metrika for each outcome sequence.*
+*How to calculate metrics for each outcome sequence.*
 
 One of the ways could be the difference (in absolute value) between the elements of genereated and target sequences.
 
 P=SUM(abs(Ci-Ti)); Ci - i-th element in a generated sequence; Ti - i-th element in the target sequence;
 
-As the result we will get priority for each generated sequence.
+As the result we get priority for each generated sequence.
 
 *Technique*
 
@@ -23,22 +23,23 @@ At every step an element with the highest priority is choosen.
 
 *Notes*
 
-Obviously the BFS algorithm gives the smallest depth in the solution tree. Because at every step the BFS algorithm generates all possible sequences. But it takes huge time (sometemes) and such heuristic algorithm based on prioritzation will give time improvement at the expense of perfect solution. It make sense when we need  to find solution faster.
+Obviously the BFS algorithm gives the smallest depth in the solution tree. Because at every step the BFS algorithm generates all possible sequences. But it takes huge time (sometemes) and such heuristic algorithm based on prioritzation will give time improvement at the expense of perfect solution. It makes sense when we need  faster solution.
 
-### Description of the heuristic 2 (divide et impera)
+### Description of the heuristic 2 ("Divide et impera")
 
 We can try one more algorithm to compare it with heuristic priority algorithm and the BFS algorithm.
 This algorithm could be derived from the BFS algorithm. We can simply fill one bucket from the rest. Than we put this bucket aside and never use it later.
-So our task adds up to finding solution for the N-1 buckets, because 1 bucket is ready.
+So our task adds up to finding solution for the *n-1* buckets, because *1* bucket is ready.
 
 Let's compute time complexity for both algorithm the BFS and "Divide et impera".
-The BFS at each step produces n^2+n children. But "Divide at impera" (n-1)^2+n-1=n^2-n. It means 2n less at every step. 
+The BFS at each step produces *n^2+n* children. But "Divide at impera" *n^2-n*. It means 2n less at every step. 
 For our experiments with 5 buckets we can compute the difference 
-1st step BFS: 30 outcomes; DaI: 20 outcomes;
-2nd step BFS: 900 outcomes; DaI: 400 outcomes;
-3rd step BFS: 2700 outcomes; DaI: 8000 outcomes;
 
-For sure that is rough numbers and many factors is not included (i.e. duplication). But it shows dynamic and this algorithm has right to existence.
+	1st step BFS: 30 outcomes; DaI: 20 outcomes;
+	2nd step BFS: 900 outcomes; DaI: 400 outcomes;
+	3rd step BFS: 2700 outcomes; DaI: 8000 outcomes;
+
+For sure that is rough numbers and many factors are not included (i.e. duplication). But it shows dynamic and this algorithm has right to existence.
 
 Interesting question - which bucket to choose as the first one? Suggestion to choose bucket with the max capacity makes sense. Because the bucket with the max capacity is fill harder. But here another game with priorities is appeared. 
 
@@ -152,6 +153,12 @@ So let's look at the table with results of DFS algorithm implementing.
 
 As we can see just swapping two operation leads to big changes in the output results.
 
+### Conclusions
+
+The BFS algorithm finds optimal solution (with the shortest solultion tree). But the algorithm is very time consumption.
+The DFS algorithm is based on luck mostly. Solution colud be found very fast or in long time. Solution is not optimal.
+The heuristic algorithms make big improvements in the working time but solution is not optimal. 
+
 ### Link to the sourcecode.
 
 All programs for the homework #2 have been writen in Perl language and have been deployed on github repository.
@@ -159,3 +166,5 @@ All programs for the homework #2 have been writen in Perl language and have been
 [DFS algorithm](https://github.com/platomik/mie-paa/blob/master/2/dfs.pl "DFS algorithm") 
 
 [BFS algorithm](https://github.com/platomik/mie-paa/blob/master/2/bfs.pl "BFS algorithm") 
+
+[Heuristic algorithm](https://github.com/platomik/mie-paa/blob/master/2/heuristic.pl "Heuristic algorithm") 
