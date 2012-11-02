@@ -46,8 +46,7 @@ In case of solving the knapsack problem using recursion, it is possible to store
         <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><tr>
     <tr>
         <td><strong>Time BF</strong></td>
-        <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td>16 h</td><td></td><td></td><td></td><
-td></td><td></td><td></td>
+        <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td>16 h</td><td></td><td></td><td></td><td></td><td></td><td></td>
     </tr>
     <tr>
         <td><strong>Time BB</strong></td>
