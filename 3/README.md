@@ -41,17 +41,30 @@ In case of solving the knapsack problem using recursion, it is possible to store
 
 **Branch and bound** constructs a binary tree where each node is a solution. Every level corresponds to one item. Building the entire tree would take exponential time. The algorithm calculates an upper bound for the maximum value a solution in a given subtree could theoretically have; it doesn't build the subtree if the upper bound is not greater than the value of the best practical solution currently known. 
 
-######Results of the dynamic programming approach implementation for the Knapsack problem
+######Results of the B&B method implementation for the Knapsack problem and compare it with the Brute Force approach
 
 <table>
     <tr>
         <td><strong>Size</strong></td>
         <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><tr>
     <tr>
-        <td><strong>Time DP</strong></td>
-        <td>0.2 sec</td><td>0.2 sec</td><td>0.5 sec</td><td>0.6 sec</td><td>1 sec</td><td>1.1 sec</td><td>1.5 sec</td><td>1.6 sec</td><td>1.9 sec</td><td>1.9 sec</td><td>1.9 sec</td><td>1.9 sec</td>
+        <td><strong>Time BF</strong></td>
+        <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td>16 h</td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td><strong>Time BB</strong></td>
+        <td> 1 sec</td><td> 1 sec</td><td> 1 sec</td><td>3 sec</td><td>9 sec</td><td>12 sec</td><td>25 sec</td><td>1m 40 sec</td><td>2m 40 sec</td><td>12m 30 sec</td><td>> 1h</td><td></td>
+    </tr>
+    <tr>
+        <td><strong>Avg Error (%)</strong></td>
+        <td>22</td><td>8,4</td><td>5,9</td><td>1,9</td><td>1,1</td><td>1,1</td><td>1</td><td>0,6</td><td>0,6</td><td>0,6</td><td></td><td></td>
+    </tr>
+    <tr>
+        <td><strong>Max Error (%)</strong></td>
+        <td>55</td><td>35</td><td>20</td><td>12,8</td><td>5,6</td><td>6</td><td>5,1</td><td>2,5</td><td>2,4</td><td>2,4</td><td></td><td></td>
     </tr>
 </table>
+
 
 ### Dynamic programming
 
@@ -65,6 +78,8 @@ We will use the second one.
 ###### Decomposition by the knapsack capacity ######
 
 Algorithm allocates an array with as many elements as the knapsack can hold unit weights. Then it loops over this array once for every item. We can assume that the time the algorithm has to spend on each element in each iteration is a constant. It means that dynamic programming takes time in Θ(Mn), where M is the capacity in unit weights of the knapsack and n is the number of items it has to consider.
+
+######Results of the dynamic programming approach implementation for the Knapsack problem
 
 <table>
     <tr>
