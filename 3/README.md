@@ -17,6 +17,8 @@ Generally, the **Branch & Bounds method** consists of several phases:
 ######Branching:######
 Break up the feasible region into successively smaller subsets. 
 
+![Branching phase](https://raw.github.com/platomik/mie-paa/master/3/branching.jpg)
+
 ######Bounding:######
 Calculate bounds on the ob jective values over each corresponding submodel.
 
@@ -25,6 +27,10 @@ Bounds are obtained by replacing the current submodel by an easier model such th
 
 ######Fathoming: ######
 Use the ob jective values of the submodels to discard certain submodels from further consideration. 
+
+######End: ######
+End is reached either when each submodel has produced an infeasible solution or has been shown to contain no better solution than the one already at hand. The best solution found is the optimal solution. 
+
 
 is always based on pruning the search space based on the cost function. In case of the The Knapsack Problem it is the knapsack cost. So we will use the optimality criterion (the cost) as the bounding factor.
 In case of solving the knapsack problem using recursion, it is possible to store the best solution ever found during the search. Then, we can check in each recursion call, if the potential solution obtained from this recursion branch can have a better cost than the currently best one (i.e. potentially produce a better solution). If not, it is useless to enter this branch. 
