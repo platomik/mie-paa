@@ -39,6 +39,7 @@ In case of solving the knapsack problem using recursion, it is possible to store
 - The upper bound of the knapsack cost is obtained as a sum of costs of items present in the knapsack and a sum of costs of the undecided items.
 - If this upper bound is less than the cost of the currently best solution, the recursion branch needs not be called, since it cannot produce a better solution.
 
+######Results of the B&B method implementation for the Knapsack problem and compare with the Brute Force approach######
 
 <table>
     <tr>
@@ -54,11 +55,11 @@ In case of solving the knapsack problem using recursion, it is possible to store
     </tr>
     <tr>
         <td><strong>Avg Error (%)</strong></td>
-        <td>22</td><td>8,4</td><td>5,9</td><td>1,9</td><td>1,1</td><td>1,1</td><td>1</td><td>0,6</td><td>0,6</td><td>12m 30 sec</td><td></td><td></td>
+        <td>22</td><td>8,4</td><td>5,9</td><td>1,9</td><td>1,1</td><td>1,1</td><td>1</td><td>0,6</td><td>0,6</td><td>0,6</td><td></td><td></td>
     </tr>
     <tr>
         <td><strong>Max Error (%)</strong></td>
-        <td>55</td><td>35</td><td>20</td><td>12,8</td><td>5,6</td><td>6</td><td>5,1</td><td>2,5</td><td>2,4</td><td>12m 30 sec</td><td></td><td></td>
+        <td>55</td><td>35</td><td>20</td><td>12,8</td><td>5,6</td><td>6</td><td>5,1</td><td>2,5</td><td>2,4</td><td>2,4</td><td></td><td></td>
     </tr>
 
 
