@@ -64,12 +64,3 @@ In case of solving the knapsack problem using recursion, it is possible to store
 
 
 </table>
-
-30	1m40sec	0,6	2,5
-32  2m40sec 0,6	2,4
-35	12m30sec
-37	> 1h
-40
-
-
-*Heuristic basics*
