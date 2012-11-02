@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-# Solve binary knapsack problem using branch and bound.
+# Solve binary knapsack problem using dynamic programming.
 
 use strict;
 use warnings;
@@ -64,6 +64,8 @@ sub row ($$$$$) {
    return ($newrow, $best);
 }
 
+# dynamic:
+# Solve binary knapsack problem using dynamic programming.
 sub dynamic ($) {
    my $cap = $_[0];
    my $best = [ undef, undef, 0, 0 ];
