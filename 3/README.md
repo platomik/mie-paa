@@ -68,7 +68,7 @@ In case of solving the knapsack problem using recursion, it is possible to store
 
 ### Dynamic programming
 
-**Dynamic programming method**  is based on breaking complex problems down into simpler subproblems (**decomposition**). There are two possible decompositions for the knapsack problem:
+**Dynamic programming method**  is based on breaking complex problems down into simpler subproblems ( **decomposition** ). There are two possible decompositions for the knapsack problem:
 
 - by the total cost
 - by the knapsack capacity
