@@ -77,7 +77,7 @@ We will use the second one.
 
 ###### Decomposition by the knapsack capacity ######
 
-Algorithm allocates an array with as many elements as the knapsack can hold unit weights. Then it loops over this array once for every item. We can assume that the time the algorithm has to spend on each element in each iteration is a constant. It means that dynamic programming takes time in Θ(Mn), where M is the capacity in unit weights of the knapsack and n is the number of items it has to consider.
+Algorithm allocates an array with as many elements as the knapsack can hold unit weights. Then it loops over this array once for every item. We can assume that the time the algorithm has to spend on each element in each iteration is a constant. It means that dynamic programming takes time in **Θ(Mn)**, where *M* is the capacity in unit weights of the knapsack and *n* is the number of items it has to consider.
 
 ######Results of the dynamic programming approach implementation for the Knapsack problem
 
@@ -87,7 +87,7 @@ Algorithm allocates an array with as many elements as the knapsack can hold unit
         <td>4</td><td>10</td><td>15</td><td>20</td><td>22</td><td>25</td><td>27</td><td>30</td><td>32</td><td>35</td><td>37</td><td>40</td><tr>
     <tr>
         <td><strong>Time DP</strong></td>
-        <td>0.15 sec</td><td>0.81 sec</td><td>37 sec</td><td>25 min</td><td>2 h</td><td>16 h</td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td>0.2 sec</td><td>0.2 sec</td><td>0.4 sec</td><td>0.8 sec</td><td>0.8 sec</td><td>0.9 sec</td><td>1.1 sec</td><td>1.1 sec</td><td>1.4 sec</td><td>1.5 sec</td><td>1.7 sec</td><td>1.7 sec</td>
     </tr>
 </table>    
 
