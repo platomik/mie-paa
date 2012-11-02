@@ -22,7 +22,7 @@ Break up the feasible region into successively smaller subsets.
 ######Bounding:######
 Calculate bounds on the objective values over each corresponding submodel.
 
-###### Relaxation: ###### 
+###### Relaxation: ######
 Bounds are obtained by replacing the current submodel by an easier model such that the solution of the latter yields a bound for the former. 
 
 ######Fathoming: ######
