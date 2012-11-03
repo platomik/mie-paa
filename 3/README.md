@@ -91,6 +91,8 @@ Algorithm allocates an array with as many elements as the knapsack can hold unit
     </tr>
 </table>    
 
+### FPTAS approximation algorithm
+
 ### Conclusions
 
 **B&B method** tends to be slower than dynamic programming. The algorithm is intrinsically more complex.
@@ -100,3 +102,8 @@ Algorithm allocates an array with as many elements as the knapsack can hold unit
 **DP** limits the number of solutions it actively considers at any one point to M, the capacity of the knapsack in unit weights. B&B does not.  But DP tends to lose for B&B on problems with large capacities of knapsack.
 
 
+### Link to the sourcecode.
+
+[Branch and bound algorithm](https://github.com/platomik/mie-paa/blob/master/3/branch.pl "Branch and bound algorithm") 
+
+[Dynamic programming](https://github.com/platomik/mie-paa/blob/master/1/heuristic.pl "Dynamic programming") 
