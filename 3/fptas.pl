@@ -6,7 +6,6 @@ use POSIX;
 my @curW; 
 my @curC;
 
-
 opendir(DIR, '.') or die "Couldn't open directory, $!";
 foreach (sort grep(/^*knap_40.inst.dat$/,readdir(DIR)))
 {
