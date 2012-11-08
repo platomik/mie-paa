@@ -1,32 +1,53 @@
 #! /usr/bin/perl
-# Solve binary knapsack problem using dynamic programming.
 
 use strict;
 use warnings;
 
 # items:
-# Elements {relative value, id, weight, value}.
+# Object descriptions read from input files.
+# Elements are quadruples specifiying
+#  * relative value, ie. value per unit weight,
+#  * name,
+#  * weight, and
+#  * value.
 my @items;
-# Knapsack capacity
-my $capacity;
 
 # report:
-# Print solution to stdout:
+# Prettyprint solution to stdout:
+# Solutions are quadruples storing
+#  * previous solution, ie. solution this solution is based on,
+#  * item distinguishing this solutionn from the previous solution,
+#  * total weight,
+#  * total value.
 sub report ($) {
+
+   # Print items in solution:
    my $s = $_[0];
    while (defined $s->[1]) {
       my $item = $s->[1];
-#      print $item->[1]," ", $item->[2]," ",$item->[3], "; ";
-		print $item->[1]," "; #print id of each taken element
+#      print $item->[1],"(", $item->[2],",", $item->[3],") ";
+       print $item->[1]," ";     
       $s = $s->[0];
    }
-   #Total cost and weight of the knapsack
-   print "| Total: ", $_[0]->[2]," of ",$capacity," with cost ", $_[0]->[3],"\n";
+
+   # Print totals:
+   print " Total: (", $_[0]->[2],";", $_[0]->[3],")\n";
 }
 
 # row:
-# Build array of solutions potentially involving item i from array of solutions.
+# Build array of solutions potentially involving item i
+# from array of solutions involving items i ... i-1 only.
 # Return pointer to best know solution.
+# Parameters:
+#   cap     knapsack capacity
+#   oldrow  list of known solutions
+#   item    item we may or may not add to known solutions
+#   relval  value/weight quotient of item i+1, ie.
+#           maximum value per unit weight of any item not yet dealt with;
+#           zero if there is no item i+1.
+#   best    best solution currently known.
+# Notable locals:
+#   newrow  array new solutions will go into
 sub row ($$$$$) {
    my ($cap, $oldrow, $item, $relval, $best) = @_;
    my $newrow = [];
@@ -104,53 +125,45 @@ sub dynamic ($) {
    }
 }
 
+
 # readstream:
 # Parse item descriptions out of one specific input stream.
 # Append them to the items array.
 sub readstream ($$) {
+
    my ($path, $fh) = @_;
-   my $lineno = 0;
    while (<$fh>) {
-      $lineno++;
-
+	  @items = ();
+	  
       # Split line into words; this tacitly drops trailing whitespace.
+      # Skip line if empty:
       my @words = split;
+            	  
+	  my $id = shift @words;
+	  my $n = shift @words;
+	  my $capacity = shift @words; 
 
-      # Extract value:
-      my $value = pop @words;
+		for (my $c = 1; $c <= $n; $c++) { # calculate values
+			my $value = pop @words;
+			my $weight = pop @words;
+		    push @items, [ $value / $weight, $n-$c+1, $weight, $value ];
+		}
 
-      # Extract weight:
-      my $weight = pop @words;
-
-      # Add items to list of items:
-      push @items, [ $value / $weight, join(' ', @words), $weight, $value ];
+	  # Solve and report:
+	  report dynamic($capacity);
    }
-   print @items; exit;
 }
 
 # main:
-my $f = "knap_40.inst.dat";
-# readfile:
-   open my $fh, $f or print "$f: $!";
-   while (<$fh>) {
-	    next if /^(\s)*$/;      # remove blank lines
-	    chomp;                  # remove newline characters
-	   	my @line = split(' ', $_); # disassemble line to array
-	 	my $id = $line[0];
-		my $n = $line[1];
-		my $W = 0;	#weight
-		my $C = 0;	#cost
-		my $V = 0;  #value
-		@items=();
-	 	$capacity = $line[2];
+sub main() {
 
-		for (my $c = 1; $c <= $n; $c++) { # calculate values
-			$W = $line[1+$c*2];
-			$C = $line[2+$c*2];
-			$V = $C/$W;	# calculate values
-			push(@items, [$V,$c,$W,$C]);
-		}
-	# Solve and report:
-	report dynamic($capacity);
-   }   
+   # capacity:
+   my $f="knap_27.inst.dat";
+   my $fh;
+   
+   open $fh, $f;
+   	readstream $f, $fh;
    close $fh;
+}
+
+main;
