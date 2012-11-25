@@ -52,7 +52,7 @@ on:
 - trades space for time.
 - complexity. it depends. O(n.M) (e.g.)
 
-**Cost/weight heuristic (Heur)**
+**Cost/weight heuristic (HC)**
 - simple greedy heuristic. 
 - cost/weight ratio is computed for each item and the items are then sorted by it.
 - the knapsack is then greedily filled starting with items with the highest ratio, until the first item that cannot be inserted is reached (the knapsack would be overfilled).
@@ -62,7 +62,7 @@ on:
 
 We are going to discover algorithm dependency on such parameters:
 
-**instance size (# of items):** n = {4, 10, 15, 20, 22, 25, 27, 30}
+**instance size (# of items):** n = {4, 10, 20, 25, 32}
 
 **maximum cost:** Cmax = {100, 200, 400, 600, 800, 1000, 1400, 1800, 2000}
 
@@ -71,5 +71,23 @@ We are going to discover algorithm dependency on such parameters:
 **knapsack capacity to total weight ratio:** m = {0.1, 0.2, 0.3, 0.5, 0.8, 1.0}
 
 **granularity from small to big:** k = {-0.4, -0.2, -0.1, -0.05, 0, 0.05, 0.1, 0.2, 0.4} 
+
+### Results of the measurements
+
+###### Number of items (instance size)
+
+First measurement is done in the previous labs when we implemented different algorithms for the knapsack problem.
+And here we are summarizing all results in one plot.
+
+![Instance](https://raw.github.com/platomik/mie-paa/master/4/instance.jpg)
+
+We are forced to use logarithmic scale because Brute force algorithm has exp growing form.
+
+Instance size (BB DP BF) (Heur)
+Maximum cost (BB DP) (Heur) J Z
+Maximum weight (BB DP) (Heur) J Z
+Ratio (BB DP) (Heur) JZ
+Granul (BB DP) (Heur) JZ
+
 
 
