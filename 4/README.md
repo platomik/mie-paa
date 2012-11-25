@@ -63,12 +63,13 @@ on:
 We are going to discover algorithm dependency on such parameters:
 
 **instance size (# of items):** n = {4, 10, 15, 20, 22, 25, 27, 30}
-10 15 20 30
+
 **maximum cost:** Cmax = {100, 200, 400, 600, 800, 1000, 1400, 1800, 2000}
-20,40,80,200
+
 **maximum weight:** Wmax = {40, 60, 80, 100, 120, 140, 160, 180, 200}
-40,80,120,200
+
 **knapsack capacity to total weight ratio:** m = {0.1, 0.2, 0.3, 0.5, 0.8, 1.0}
-0.1, 0.2, 0.5, 1.0
+
 **granularity from small to big:** k = {-0.4, -0.2, -0.1, -0.05, 0, 0.05, 0.1, 0.2, 0.4} 
-0.1, 0.2, 0.5, 1.0
+
+
