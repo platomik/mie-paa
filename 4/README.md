@@ -72,12 +72,13 @@ We are going to discover algorithm dependency on such parameters:
 
 **granularity from small to big:** k = {0.1, 0.2, 0.4, 0.8, 1.6} 
 
+** small or big items are prefered: ** d= {-1; 1}
+
 ### Results of the measurements
 
 ###### Number of items (instance size)
 
-First measurement is done in the previous labs when we implemented different algorithms for the knapsack problem.
-And here we are summarizing all results in one plot.
+First measurement is done in the previous labs when we implemented different algorithms for the knapsack problem. And here we are summarizing all results in one plot.
 
 ![Instance](https://raw.github.com/platomik/mie-paa/master/4/instance.jpg)
 
@@ -86,6 +87,8 @@ We are forced to use logarithmic scale because Brute force algorithm has an expo
 Since Heuristic is not an exact algorithm we should estimate its solution quality:
 
 ![Instance2](https://raw.github.com/platomik/mie-paa/master/4/instance2.jpg)
+
+*Notes:* It looks not bad idea to use Brute force algorithm on small instance sizes. It won the race for `Branch and bound` and `Dynamic programing` algorithm. `Heuristic` algorithm achive the best results but in the small instances it has huge relative error.
 
 ###### Maximum cost, Cmax
 We can exclude `Brute force` algorithm from the resulting plot because of its insensitive to the Cmax parameter.
@@ -96,9 +99,10 @@ For the heuristic algorithm it would be interested to look at the solution quali
 
 ![Cmax2](https://raw.github.com/platomik/mie-paa/master/4/costmax2.jpg)
 
+*Notes:* BB (red curve) is very sensitive to the Cmax parameter whereas DP (blue curve) is more stable. Runtime and errors of Heuristic algorithm doesn't depened so much on this parameter.
+
 ###### Maximum weight, Wmax
 Since our DP algorithm depends on weight parameter it could be good idea switch to runtime steps scale from runtime scale in this measurements.
-And finally we can notice linear function for DP algorithm.
 
 ![Wmax](https://raw.github.com/platomik/mie-paa/master/4/weightmax.jpg)
 
@@ -106,19 +110,31 @@ Relative error plot looks like:
 
 ![Wmax2](https://raw.github.com/platomik/mie-paa/master/4/weightmax2.jpg)
 
-###### Knapsack capacity to total weight ratio.
+*Notes:* Linear function for DP algorithm whereas BB is quite stable. Heuristic algorithm is resistive for this parameter.
 
+###### Knapsack capacity to total weight ratio.
+BB, DP, HC dependence on the ratio parameter:
 ![Ratio](https://raw.github.com/platomik/mie-paa/master/4/ratio.jpg)
+
+Errors of HC algorithm:
 ![Ratio2](https://raw.github.com/platomik/mie-paa/master/4/ratio2.jpg)
 
+*Notes:* BB algorithm achives much better results for bigger ratio values whereas DP "doesn't care". Heuristic algorithm has acceptable relative error, but bad maximal values for small ratio.
 
 ###### Granularity from small to big
-for small items -d parameter =-1
+At the begining we represent results for small items which are specified by parameter `d` in the generator.
+Here is `d=-1`.
+
 ![Granul](https://raw.github.com/platomik/mie-paa/master/4/granul.jpg)
+
 ![Granul2](https://raw.github.com/platomik/mie-paa/master/4/granul2.jpg)
-for big items -d par =1
+
+For the big items specified by parameter `d=1`:
+
 ![Granul3](https://raw.github.com/platomik/mie-paa/master/4/granul3.jpg)
+
 ![Granul4](https://raw.github.com/platomik/mie-paa/master/4/granul4.jpg)
 
+*Notes:* BB and DP have almost the same results for the small items. For the big items the difference becomes bigger and we can notice that BB is more sensitive to the granularity parameter. Relative error for the Heuristic algorithm is acceptable.
 
 
