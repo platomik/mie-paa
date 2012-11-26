@@ -114,9 +114,11 @@ Relative error plot looks like:
 
 ###### Knapsack capacity to total weight ratio.
 BB, DP, HC dependence on the ratio parameter:
+
 ![Ratio](https://raw.github.com/platomik/mie-paa/master/4/ratio.jpg)
 
 Errors of HC algorithm:
+
 ![Ratio2](https://raw.github.com/platomik/mie-paa/master/4/ratio2.jpg)
 
 *Notes:* BB algorithm achives much better results for bigger ratio values whereas DP "doesn't care". Heuristic algorithm has acceptable relative error, but bad maximal values for small ratio.
@@ -137,4 +139,15 @@ For the big items specified by parameter `d=1`:
 
 *Notes:* BB and DP have almost the same results for the small items. For the big items the difference becomes bigger and we can notice that BB is more sensitive to the granularity parameter. Relative error for the Heuristic algorithm is acceptable.
 
+
+### Conclusions:
+
+**Brute force** algorithm has an exponential growth in terms of runtime for instance size. For the rest of statistical parameters it is insensitive. BF could be used for small instances calculations.
+
+**Branch and Bound** algorithm is less sensitive than BF on instance size but still this dependence is big. Also we can mention dependence on the ratio parameter and granularity big objects. It makes sense to use BB algorithm for heavy weight items in the instances and therefore for a big ratio coefficient.
+
+**Dynamic programming** is simpler than BB and more predictable both in terms of memory consumption and in terms of running time. It would not be good idea to use this algorithm if some heavy items exist. It shows good results for a long instances.
+
+**Heuristic algorithm** is very sensitive in terms of errors for the following parameters : instance size; ratio; granularity. In most of cases we have good (small) avg error but bad (big) max relative error. 
+It is good way to use it on big instances, expensive items, for big ratio value parameter. It is some kind of compromise between very fast time calculation and possible errors.
 
