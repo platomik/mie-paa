@@ -64,7 +64,7 @@ We are going to discover algorithm dependency on such parameters:
 
 **instance size (# of items):** n = {4, 10, 20, 25, 32}
 
-**maximum cost:** Cmax = {100, 200, 400, 600, 800, 1000, 1400, 1800, 2000}
+**maximum cost:** Cmax = {30, 60, 120, 240, 360}
 
 **maximum weight:** Wmax = {40, 60, 80, 100, 120, 140, 160, 180, 200}
 
@@ -87,8 +87,15 @@ Since Heuristic is not an exact algorithm we should estimate its solution qualit
 
 ![Instance2](https://raw.github.com/platomik/mie-paa/master/4/instance2.jpg)
 
-Instance size (BB DP BF) (Heur)
-Maximum cost (BB DP) (Heur) J Z
+###### Maximum cost
+We can exclude `Brute force` algorithm from the resulting plot because of its insensitive to the Cmax parameter.
+
+![Cmax](https://raw.github.com/platomik/mie-paa/master/4/costmax.jpg)
+
+For the heuristic algorithm it would be interested to look at the solution quality plot:
+
+![Cmax2](https://raw.github.com/platomik/mie-paa/master/4/costmax2.jpg)
+
 Maximum weight (BB DP) (Heur) J Z
 Ratio (BB DP) (Heur) JZ
 Granul (BB DP) (Heur) JZ
