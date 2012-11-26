@@ -66,9 +66,9 @@ We are going to discover algorithm dependency on such parameters:
 
 **maximum cost:** Cmax = {30, 60, 120, 240, 360}
 
-**maximum weight:** Wmax = {40, 60, 80, 100, 120, 140, 160, 180, 200}
+**maximum weight:** Wmax = {30, 60, 90, 120, 240, 360}
 
-**knapsack capacity to total weight ratio:** m = {0.1, 0.2, 0.3, 0.5, 0.8, 1.0}
+**knapsack capacity to total weight ratio:** m = {0.1, 0.2, 0.4, 0.6, 0.9}
 
 **granularity from small to big:** k = {-0.4, -0.2, -0.1, -0.05, 0, 0.05, 0.1, 0.2, 0.4} 
 
@@ -87,7 +87,7 @@ Since Heuristic is not an exact algorithm we should estimate its solution qualit
 
 ![Instance2](https://raw.github.com/platomik/mie-paa/master/4/instance2.jpg)
 
-###### Maximum cost
+###### Maximum cost, Cmax
 We can exclude `Brute force` algorithm from the resulting plot because of its insensitive to the Cmax parameter.
 
 ![Cmax](https://raw.github.com/platomik/mie-paa/master/4/costmax.jpg)
@@ -96,8 +96,22 @@ For the heuristic algorithm it would be interested to look at the solution quali
 
 ![Cmax2](https://raw.github.com/platomik/mie-paa/master/4/costmax2.jpg)
 
-Maximum weight (BB DP) (Heur) J Z
-Ratio (BB DP) (Heur) JZ
+###### Maximum weight, Wmax
+Since our DP algorithm depends on weight parameter it could be good idea switch to runtime steps scale from runtime scale in this measurements.
+And finally we can notice linear function for DP algorithm.
+
+![Wmax](https://raw.github.com/platomik/mie-paa/master/4/weightmax.jpg)
+
+Relative error plot looks like:
+
+![Wmax2](https://raw.github.com/platomik/mie-paa/master/4/weightmax2.jpg)
+
+###### Knapsack capacity to total weight ratio.
+
+![Ratio](https://raw.github.com/platomik/mie-paa/master/4/ratio.jpg)
+![Ratio2](https://raw.github.com/platomik/mie-paa/master/4/ratio2.jpg)
+
+
 Granul (BB DP) (Heur) JZ
 
 
