@@ -70,7 +70,7 @@ We are going to discover algorithm dependency on such parameters:
 
 **knapsack capacity to total weight ratio:** m = {0.1, 0.2, 0.4, 0.6, 0.9}
 
-**granularity from small to big:** k = {-0.4, -0.2, -0.1, -0.05, 0, 0.05, 0.1, 0.2, 0.4} 
+**granularity from small to big:** k = {0.1, 0.2, 0.4, 0.8, 1.6} 
 
 ### Results of the measurements
 
@@ -112,7 +112,13 @@ Relative error plot looks like:
 ![Ratio2](https://raw.github.com/platomik/mie-paa/master/4/ratio2.jpg)
 
 
-Granul (BB DP) (Heur) JZ
+###### Granularity from small to big
+for small items -d parameter =-1
+![Granul](https://raw.github.com/platomik/mie-paa/master/4/granul.jpg)
+![Granul2](https://raw.github.com/platomik/mie-paa/master/4/granul2.jpg)
+for big items -d par =1
+![Granul3](https://raw.github.com/platomik/mie-paa/master/4/granul3.jpg)
+![Granul4](https://raw.github.com/platomik/mie-paa/master/4/granul4.jpg)
 
 
 
