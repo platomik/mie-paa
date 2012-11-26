@@ -81,7 +81,11 @@ And here we are summarizing all results in one plot.
 
 ![Instance](https://raw.github.com/platomik/mie-paa/master/4/instance.jpg)
 
-We are forced to use logarithmic scale because Brute force algorithm has exp growing form.
+We are forced to use logarithmic scale because Brute force algorithm has an exponential growing form.
+
+Since Heuristic is not an exact algorithm we should estimate its solution quality:
+
+![Instance2](https://raw.github.com/platomik/mie-paa/master/4/instance2.jpg)
 
 Instance size (BB DP BF) (Heur)
 Maximum cost (BB DP) (Heur) J Z
