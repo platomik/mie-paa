@@ -9,8 +9,8 @@ To achive better time complexity in this task we are going to implement **simula
 
 In the knapsack problem the heuristic function is f(x). It prompts - "is the solution better/worse than current?".
 
-https://raw.github.com/platomik/mie-paa/master/3/KP-main-formula.jpg
+![](https://raw.github.com/platomik/mie-paa/master/3/KP-main-formula.jpg)
 
 Let's look at the figure - the 3D-plot is drawn there perfectly illustrates benefits of a stohastic algorithm using. If we follow the princple "look around you if it's better there" then we almost never reach the maximum. We can only get local maximum which is worse. 
 
-https://raw.github.com/platomik/mie-paa/master/5/pic1.jpg
+![](https://raw.github.com/platomik/mie-paa/master/5/pic1.jpg)
