@@ -28,4 +28,27 @@ Let's go back from metallurgy to the simulated annealing algorithm. First of all
 
 Second, we should follow heuristic function - if it finds better solution then we should take it into account else we can use probabilistic method for choosing new state.
 
-Third we can notice temperature parameter in the statement.
+Third we may notice temperature parameter in the statement. The higher temperature the worse solutions are acceptable more often. The lower temperature the the probability to choose worse solution is lower. If it converges to zero then algorithm becomes just heuristic without probabilistic component.
+
+And finale, the cool function. We can start with temperature T0 and then after each step the temperature is decreased by exponential decay (http://en.wikipedia.org/wiki/Exponential_decay) Τ=α·Τ (usually a=0.8 .. 0.95). It makes sense to add in cool function number of steps without any improvements of heuristic function. Obviously this two parameters will define error in the solution of the algorithm and runtime.
+
+### Experimental results.
+
+First measurements is done for the number of steps in the cooling schedule. This number shows how many steps solution did not improved.
+
+Parameters for the measurement:
+	temperature decreasing coefficient alfa = 0.8
+	initial temperature = 40
+
+Results:
+
+^Steps | 10 | 25 | 50 | 100 | 200 | 400 | 800 | 1600 |
+^Runtime (sec) | 3 | 8 | 16 | 41 | 70 | 150 | 270 | 540 |
+^Relative error(%) | 20.6 | 14 | 10.1 | 6.5 | 4.8 | 3.1 | 2.2 | 1.8 |
+
+Please don't be surprised in the results of runtime. Processor was working in the slowdown mode to better estimate algorithm behaivour for different type of values.
+
+We may notice linear correlation between runtime and number of steps.
+
+If we try to represent both values on the same plot it should look like: 
+![](https://raw.github.com/platomik/mie-paa/master/5/pic3.jpg)
