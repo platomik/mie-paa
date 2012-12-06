@@ -51,4 +51,6 @@ Please don't be surprised in the results of runtime. Processor was working in th
 We may notice linear correlation between runtime and number of steps.
 
 If we try to represent both values on the same plot it should look like: 
+
 ![](https://raw.github.com/platomik/mie-paa/master/5/pic3.jpg)
+
