@@ -34,9 +34,10 @@ And finale, the cool function. We can start with temperature T0 and then after e
 
 ### Experimental results.
 
-First measurements is done for the number of steps in the cooling schedule. This number shows how many steps solution did not improved.
+First measurements is done for **the number of steps** in the cooling schedule. This number shows how many steps solution did not improved.
 
 Parameters for the measurement:
+
 	temperature decreasing coefficient alfa = 0.8
 	initial temperature = 40
 
@@ -50,7 +51,40 @@ Please don't be surprised in the results of runtime. Processor was working in th
 
 We may notice linear correlation between runtime and number of steps.
 
-If we try to represent both values on the same plot it should look like: 
+If we try to represent both values on the same plot it should look like (better to use logarithmic scale for Y axis): 
 
 ![](https://raw.github.com/platomik/mie-paa/master/5/pic3.jpg)
 
+We can make decision that k=100 number of steps can be optimal.
+
+Second measurements is done for the parameter Alfa. It shows how fast/slow temperature is going down.
+
+Parameters for the measurement:
+	
+	Number of steps k = 100
+	initial temperature = 40
+	
+Results: 
+
+^Alfa | 0.8 | 0.83 | 0.86 | 0.89 | 0.92 | 0.95 |
+^Runtime (sec) | 40 | 44 | 48 | 49 | 50 | 48 |
+^Relative error(%) | 7.2 | 6.4 | 6.3 | 5.8 | 6.3 | 5.9 |
+
+![](https://raw.github.com/platomik/mie-paa/master/5/pic4.jpg)
+
+The results are quite stable and we can observe very weak dependence on `Alfa` coefficient. Let's say Alfa = 0.85 is the optimal for the algorithm, but actually all alfas from the range 0.8..0.95 gives the same result.
+
+The third measurements. Initial temperature. 
+
+Parameters for the measurement:
+
+	Number of steps k = 100
+	Alfa = 0.85
+	
+Results:
+
+^Initial temperature | 0.5 | 1 | 2 | 4 | 8 | 15 | 30 | 60 | 100 |
+^Runtime (sec) | 23 | 24 | 26 | 27 | 31 | 33 | 48 | 43 | 52 |
+^Relative error(%) | 25.9 | 21.1 | 20.8 | 18.1 | 15.9 | 12.4 | 7.9 | 5.4 | 8 |
+
+![](https://raw.github.com/platomik/mie-paa/master/5/pic5.jpg)

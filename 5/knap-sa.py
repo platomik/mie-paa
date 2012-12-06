@@ -4,9 +4,9 @@ import math
 import operator
 import random
  
-STEPS = 10
-ALPHA = 0.8
-TEMP_0 = 40.0 
+STEPS = 100
+ALPHA = 0.85
+TEMP_0 = 100 
 M = 600
  
 def main(args):
