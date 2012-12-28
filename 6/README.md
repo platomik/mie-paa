@@ -22,25 +22,15 @@ SAT is satisfiability problem. We have Boolean expression written using only AND
 
 We will focus in the work on Genetic Algorithm implementation. It would be good mention some important terms that are going to be used during the research.
 
-Individual (phenotype) - configuration (solution).
-Chromosome - representation of a configuration. Consists of genes.	
-Gene - configuration (output) variable.	
-Locus - position of a given variable in a chromosome.	
-Genome (population) - how many individuals to simultaneously exist at each generation.	
-Generation - current genome .
-
-**Main Operations.**
-Selection. Here the performance of all the individuals is evaluated based on the fitness function, and each is given a specific fitness value. The higher the value, the bigger the chance of an individual passing its genes on in future generations through mating (crossover).
-
-Crossover. Here, individuals selected are randomly paired up for crossover (aka sexual reproduction). This is further controlled by the crossover rate specified and may result in a new offspring individual that contains genes common to both parents. New individuals are injected into the current population.
-
-Mutation. In this step, each individual is given the chance to mutate based on the mutation probability specified. If an individual is to mutate, each of its genes is given the chance to randomly switch its value to some other state.
-
-Strategies:
+	Individual (phenotype) - configuration (solution).
+	Chromosome - representation of a configuration. Consists of genes.	
+	Gene - configuration (output) variable.	
+	Locus - position of a given variable in a chromosome.	
+	Genome (population) - how many individuals to simultaneously exist at each generation.	
+	Generation - current genome.
+	Strategies define some parameters for the basic operation of the genetic algorithm (selection, crossover, mutation).
+	Fitness - cost function for each individual.
 	
-Fitness
-The fitness function should expect only one argument, an anonymous list of genes, corresponding to the individual being analyzed. It is expected to return a number which defines the fitness score of the said individual. The higher the score, the more fit the individual, the more the chance it has to be chosen for crossover.
-
 ### Algorithm implementation description 
 
 Key: Use fixed-clause-lengthmodel. 
@@ -81,3 +71,4 @@ Is the algorithm adequatly fast?
 Isn't there a useless time overhead? Cannot the algorithm be stopped earlier?
 
 
+	The fitness function should expect only one argument, an anonymous list of genes, corresponding to the individual being analyzed. It is expected to return a number which defines the fitness score of the said individual. The higher the score, the more fit the individual, the more the chance it has to be chosen for crossover.
