@@ -4,7 +4,7 @@
 
 ### SAT problem inroduction
 
-SAT is satisfiability problem. We have Boolean expression written using only AND, OR, NOT, variables, and brackets. **The SAT problem is:* given the expression, is there some assignment of TRUE and FALSE values to the variables that will make the entire expression true?
+SAT is satisfiability problem. We have Boolean expression written using only AND, OR, NOT, variables, and brackets. **The SAT problem is:** given the expression, is there some assignment of TRUE and FALSE values to the variables that will make the entire expression true?
 	
 	x1∧x2∨x3
 
@@ -16,7 +16,7 @@ SAT is satisfiability problem. We have Boolean expression written using only AND
 
 **Weighted MAX-SAT** asks for the maximum weight which can be satisfied by any assignment, given a set of weighted clauses.
 
-*Here weighted 3-SAT problem is going to be investigated.*
+*Here is weighted 3-SAT problem going to be investigated.*
 
 ### Algorithm introduction
 
@@ -67,6 +67,8 @@ Parameters:
 - crossover ratio
 - mutation ratio
 - strategy
+- generations
+- weight
 - rel err/unsat ratio
 
 ### Input data
