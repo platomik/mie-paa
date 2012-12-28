@@ -34,11 +34,11 @@ And finale, the cool function. We can start with temperature T0 and then after e
 
 ### Experimental results.
 
-First measurements is done for **the number of steps** in the cooling schedule. This number shows how many steps solution did not improved.
+**First measurements** is done for the number of steps in the cooling schedule. This number shows how many steps solution did not improved.
 
 Parameters for the measurement:
 
-	temperature decreasing coefficient alfa = 0.8
+	temperature decreasing coefficient alpha = 0.8
 	initial temperature = 40
 
 Results:
@@ -57,7 +57,7 @@ If we try to represent both values on the same plot it should look like (better 
 
 We can make decision that k=100 number of steps can be optimal.
 
-Second measurements is done for the parameter Alfa. It shows how fast/slow temperature is going down.
+**The second measurements** is done for the parameter alpha. It shows how fast/slow temperature is going down.
 
 Parameters for the measurement:
 	
@@ -66,20 +66,20 @@ Parameters for the measurement:
 	
 Results: 
 
-^Alfa | 0.8 | 0.83 | 0.86 | 0.89 | 0.92 | 0.95 |
+^Alpha | 0.8 | 0.83 | 0.86 | 0.89 | 0.92 | 0.95 |
 ^Runtime (sec) | 40 | 44 | 48 | 49 | 50 | 48 |
 ^Relative error(%) | 7.2 | 6.4 | 6.3 | 5.8 | 6.3 | 5.9 |
 
 ![](https://raw.github.com/platomik/mie-paa/master/5/pic4.jpg)
 
-The results are quite stable and we can observe very weak dependence on `Alfa` coefficient. Let's say Alfa = 0.85 is the optimal for the algorithm, but actually all alfas from the range 0.8..0.95 gives the same result.
+The results are quite stable and we can observe very weak dependence on `Alpha` coefficient. Let's say Alpha = 0.85 is the optimal for the algorithm, but actually all alphas from the range 0.8..0.95 gives the same result.
 
-The third measurements. Initial temperature. 
+** The third measurements.** Initial temperature. 
 
 Parameters for the measurement:
 
 	Number of steps k = 100
-	Alfa = 0.85
+	Alpha = 0.85
 	
 Results:
 
@@ -88,3 +88,12 @@ Results:
 ^Relative error(%) | 25.9 | 21.1 | 20.8 | 18.1 | 15.9 | 12.4 | 7.9 | 5.4 | 8 |
 
 ![](https://raw.github.com/platomik/mie-paa/master/5/pic5.jpg)
+
+We may observe weak dependence on the initial temperature parameter for the runtime of the algorithm. But "cold" knapsack is characterized by stochastic nature with big relative errors.
+
+The optimal value for the initial temperature parameter can be choosen 60.
+
+###Conclusions.
+
+The simulated annealing algorithm has stochastic nature. The same results can not be achived for the same algorithm parameters. The runtime of the algorithm depends on number of steps in the cooling schedule when the solution can not be improved. For the big values the algorithm achieves the result almost the best one.
+Relative error of the algorithm depends on the initial temperature of the algorithm, the number of steps in cooling schedule again and fortune. Set the temperature to very big values is useless procedure. 
