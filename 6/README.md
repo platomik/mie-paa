@@ -33,6 +33,28 @@ We will focus in the work on Genetic Algorithm implementation. It would be good 
 	
 ### Algorithm implementation description 
 
+The algorithm is programmed in Perl language. Doing all semestral homeworks I was trying to estimate performance of the algorithms in different programming languages Perl/Python/C. Pure perl implementations had the worst memory consumption, but very nice cpu usage. 
+
+Program has the following parameters for tunning genetic algorithm:
+
+- population,
+- crossover rate,
+- mutation rate,	
+- selection strategy,
+- crossover strategy,
+- generations
+
+Program has a modular structure. Some parameters were implemented in separate modules for better scalability. Brief description of them:
+
+ ga.pl - main file. procedure of parsing files. parameters of genetic algorithm. fitness function. results printing.
+ AI/Genetic.pm - central module of GA. specifies main functions and subroutines. includes submodules.
+ AI/Genetic/Defaults.pm - module of GA strategies and operations. 
+ AI/Genetic/IndBitVector.pm - base class for Genes
+ AI/Genetic/Individual.pm - base class for Individuals
+ AI/Genetic/OpCrossover.pm  - implements various crossover operators. single point crossover, double point crossover, uniform crossover
+ AI/Genetic/OpMutation.pm - implements the mutation mechanism.
+ AI/Genetic/OpSelection.pm - implements various selection operators. Roulette Wheel, Tournament, Random.
+
 Key: Use fixed-clause-lengthmodel. 
 (Mitchell, Selman, and Levesque 1992) 
 •Critical parameter: ratio of the number of clauses 

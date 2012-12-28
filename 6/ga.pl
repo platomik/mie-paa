@@ -36,7 +36,7 @@ for (my $i = 0; $i < $n; $i++) {
 ##############################################################
     my $ga = new AI::Genetic(
         -fitness    => \&fitnessFunc,
-        -population => 1000,
+        -population => 100,
         -crossover  => 0.95,
         -mutation   => 0.01,
         -terminate  => \&terminateFunc,
