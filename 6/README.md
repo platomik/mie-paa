@@ -1,6 +1,6 @@
 # MIE-PAA. Homework #6
 
-## MAX-SAT Solution Using Advanced Iterative Method. Genetic Algorithm implementation.
+# MAX-SAT Solution Using Advanced Iterative Method. Genetic Algorithm implementation.
 
 ### SAT problem inroduction
 
@@ -46,29 +46,18 @@ Program has the following parameters for tunning genetic algorithm:
 
 Program has a modular structure. Some parameters were implemented in separate modules for better scalability. Brief description of them:
 
- ga.pl - main file. procedure of parsing files. parameters of genetic algorithm. fitness function. results printing.
- AI/Genetic.pm - central module of GA. specifies main functions and subroutines. includes submodules.
- AI/Genetic/Defaults.pm - module of GA strategies and operations. 
- AI/Genetic/IndBitVector.pm - base class for Genes
- AI/Genetic/Individual.pm - base class for Individuals
- AI/Genetic/OpCrossover.pm  - implements various crossover operators. single point crossover, double point crossover, uniform crossover
- AI/Genetic/OpMutation.pm - implements the mutation mechanism.
- AI/Genetic/OpSelection.pm - implements various selection operators. Roulette Wheel, Tournament, Random.
+ **ga.pl** - main file. procedure of parsing files. parameters of genetic algorithm. fitness function. results printing.
+ **AI/Genetic.pm** - central module of GA. specifies main functions and subroutines. includes submodules.
+ **AI/Genetic/Defaults.pm** - module of GA strategies and operations. 
+ **AI/Genetic/IndBitVector.pm** - base class for Genes
+ **AI/Genetic/Individual.pm** - base class for Individuals
+ **AI/Genetic/OpCrossover.pm**  - implements various crossover operators. single point crossover, double point crossover, uniform crossover
+ **AI/Genetic/OpMutation.pm** - implements the mutation mechanism.
+ **AI/Genetic/OpSelection.pm** - implements various selection operators. Roulette Wheel, Tournament, Random.
 
-Key: Use fixed-clause-lengthmodel. 
-(Mitchell, Selman, and Levesque 1992) 
-•Critical parameter: ratio of the number of clauses 
-to the number of variables. 
-•Hardest 3SAT problems at ratio = 4.3
+### Input data
 
-At low ratios: 
-−few clauses (constraints)− 
-many assignments− 
-easily found 
-•At high ratios: 
-−many clauses− 
-inconsistencies easily detected
-
+**Working instances**. From the [https://edux.fit.cvut.cz/courses/MI-PAA/_media/homeworks/06/ai-phys1.pdf] we know the hardest 3SAT problems has ratio 4.3 (ratio of the number of clauses to the number of variables). We will focus on the instances with this rate generated in DIMACS format. But there are measurements with different ratio as well. The instances are retrived from [http://www.cs.ubc.ca/~hoos/SATLIB/benchm.html]. Weights are generated randomly.
 
 ## Working with the heuristics
 Parameters:
@@ -83,7 +72,6 @@ Parameters:
 - weight
 - rel err/unsat ratio
 
-### Input data
 
 ## Conclusions
 Does the algorithm return satisfactory solutions?
@@ -94,3 +82,14 @@ Isn't there a useless time overhead? Cannot the algorithm be stopped earlier?
 
 
 	The fitness function should expect only one argument, an anonymous list of genes, corresponding to the individual being analyzed. It is expected to return a number which defines the fitness score of the said individual. The higher the score, the more fit the individual, the more the chance it has to be chosen for crossover.
+
+
+Ob
+
+At low ratios: 
+−few clauses (constraints)− 
+many assignments− 
+easily found 
+•At high ratios: 
+−many clauses− 
+inconsistencies easily detected
