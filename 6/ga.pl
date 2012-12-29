@@ -83,11 +83,11 @@ for (my $i = 0; $i < $n; $i++) {
 		#full satisfaction	
 		  #my $fitness = $r*$formula_is_satisfied;
 		#clause
-		  my $fitness = $formula_is_satisfied;
+		  #my $fitness = $formula_is_satisfied;
 		#genes
 		  #my $fitness = $r;
 		#weights
-		  #my $fitness = $weight;  
+		  my $fitness = $weight;  
 		#relaxation
 		  #my $fitness = $r-1000*($m-$formula_is_satisfied);		  
 		#@@@@@@@@@@@@

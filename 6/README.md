@@ -85,10 +85,27 @@ Experiment 4. The same as experiment 1 but for 100 generations. We need to estim
 
 ![](https://raw.github.com/platomik/mie-paa/master/6/p4.jpg)
 
+Conclusion: We may notice relation between FW and FWV fitness functions only. They have the same shape but FWV has intrinsic randomness (because of random assigned weights). And FWV has more smoothed curve compared to FV (because of wider range of values). And there is no correlation between FC, FB, and FW fitness functions. But wich one to choose for the future experiments or work with all of them? Last experiment tell us draw attention on the number of generations in the Genetic Algorithm.
+
+** Experiments with number of generations**
+
+A GA implementation runs for a discrete number of time steps called generations. From theoretical poing of view after a few generations, the population should converge on a "good-enough" solution.
+
+Question: Estimate quality of population depending on a number of generations.
+
+Experiment 5. Observe population for the fittness function based on the number of satisfied clauses. Subject to population=400, crossover ratio=0.95, mutation ratio=0.01.
+
+![](https://raw.github.com/platomik/mie-paa/master/6/p5.jpg)
+
+Experiment 6. Observe population for the fittness function based on the weighted input variables assigned to 1. Conditions are the same. Population=400, crossover ratio=0.95, mutation ratio=0.01.
+
+![](https://raw.github.com/platomik/mie-paa/master/6/p6.jpg)
+
+Conclusion: 
+
 Parameters:
 - ratio
 - gens
-- fitness func
 - population
 - crossover ratio
 - mutation ratio
