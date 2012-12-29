@@ -42,7 +42,8 @@ Program has the following parameters for tunning genetic algorithm:
 - mutation rate,	
 - selection strategy,
 - crossover strategy,
-- generations
+- generations,
+- termination creteria
 
 Program has a modular structure. Some parameters were implemented in separate modules for better scalability. Brief description of them:
 
@@ -59,7 +60,31 @@ Program has a modular structure. Some parameters were implemented in separate mo
 
 **Working instances**. From the [https://edux.fit.cvut.cz/courses/MI-PAA/_media/homeworks/06/ai-phys1.pdf] we know the hardest 3SAT problems has ratio 4.3 (ratio of the number of clauses to the number of variables). We will focus on the instances with this rate generated in DIMACS format. But there are measurements with different ratio as well. The instances are retrived from [http://www.cs.ubc.ca/~hoos/SATLIB/benchm.html]. Weights are generated randomly.
 
-## Working with the heuristics
+### Experiments and Results 
+
+**Experiments with fitness function.**
+
+The fitness function expects an list of genes, corresponding to the individual. It returns a number which defines the cost of the individual. The higher the score, the more fit the individual, the more the chance it has to be chosen for crossover.
+
+Question: does it matter which fitness function to choose?
+Let's denote **FC** - fitness function is the number of satisfied clauses. **FV** - for fitness function with number of input variables assigned to 1. **FWV** - fitness function is weights of input variables assigned to 1. **FC** -fitness function calculated by formula FB = (# of input variables assigned to 1) – 1000*(# of unsatisfied clauses). 
+
+Experiment 1. Observe FC(blue)/FV(red)/FWV(yellow) relations for population=400, crossover ratio=0.95, mutation ratio=0.01 in the first generation. Choosen fitness function FC(blue).
+
+![](https://raw.github.com/platomik/mie-paa/master/6/p1.jpg)
+
+Experiment 2. Observe FV(red)/FWV(yellow) relations for population=400, crossover ratio=0.95, mutation ratio=0.01 in the first generation. Choosen fitness function FV(red).
+
+![](https://raw.github.com/platomik/mie-paa/master/6/p2.jpg)
+
+Experiment 3. Observe FB(blue)/FV(red)/FWV(yellow) relations for population=400, crossover ratio=0.95, mutation ratio=0.01 in the first generation. Choosen fitness function FB(blue).
+
+![](https://raw.github.com/platomik/mie-paa/master/6/p3.jpg)
+
+Experiment 4. The same as experiment 1 but for 100 generations. We need to estimate how the number of generations affects on the relation.
+
+![](https://raw.github.com/platomik/mie-paa/master/6/p4.jpg)
+
 Parameters:
 - ratio
 - gens
@@ -73,7 +98,7 @@ Parameters:
 - rel err/unsat ratio
 
 
-## Conclusions
+### Conclusions
 Does the algorithm return satisfactory solutions?
 Does the algorithm return satisfactory solutions for instances of any size? How does the error grow with the instance size?
 Does the algorithm have a sufficient iterative power? Does it converge correctly?
@@ -81,7 +106,6 @@ Is the algorithm adequatly fast?
 Isn't there a useless time overhead? Cannot the algorithm be stopped earlier?
 
 
-	The fitness function should expect only one argument, an anonymous list of genes, corresponding to the individual being analyzed. It is expected to return a number which defines the fitness score of the said individual. The higher the score, the more fit the individual, the more the chance it has to be chosen for crossover.
 
 
 Ob
