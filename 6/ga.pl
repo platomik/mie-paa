@@ -36,14 +36,14 @@ for (my $i = 0; $i < $n; $i++) {
 ##############################################################
     my $ga = new AI::Genetic(
         -fitness    => \&fitnessFunc,
-        -population => 200,
+        -population => 2000,
         -crossover  => 0.95,
         -mutation   => 0.01,
         -terminate  => \&terminateFunc,
        );
 
      $ga->init($n);
-     $ga->evolve('randomUniform',100);
+     $ga->evolve('randomUniform',1);
 
      print "Best score = ", $ga->getFittest->score, ".\n";
      print "Best genes = ", $ga->getFittest->genes, ".\n";     
@@ -92,7 +92,7 @@ for (my $i = 0; $i < $n; $i++) {
 		  #my $fitness = $r-1000*($m-$formula_is_satisfied);		  
 		#@@@@@@@@@@@@
 		  
-		  print "fitness= ",$fitness." items= ",$r," weight= ",$weight," ~ "."@$genes"."\n";
+#		  print "fitness= ",$fitness." items= ",$r," weight= ",$weight," ~ "."@$genes"."\n";
 
 		  return $fitness;
       }
