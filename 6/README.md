@@ -127,29 +127,37 @@ Table shows the best/avg result achived for generations in rows and population i
 ^500 | 0.94/0.75 | 0.91/0.8 | 0.96/0.86| 1.14/0.96 | 1.17/0.98 |
 ^1000 | 0.79/0.73 | 0.99/0.81 | 0.97/0.88 | 1.05/0.91 | 1.2/0.95 |
 
+What are these numbers in the cells? In order do not store big values in the cells it could be good idea simplify numbers. We assign weights randomly from 0 to 100. For the formula with 10 variables we should expect value 500 in average. So let's just divide final result to the number of variables times 50.
+
 Experiment 8. Measurements for different population size and number of generations on the set of 200 values and 860 clauses.
 
 ^generations\population ^20 ^100 ^500 ^2000 ^10000 |
-^1 | 0.16/0.14 | 0.16/0.14 | 0.15/0.14 |  |  |
-^10 |  |  | / |  |  |
-^50 |  |  | / |  |  |
-^200 |  |  | / |  |  |
-^500 |  |  | / |  |  |
-^1000 |  |  | / |  |  |
+^1 | 0.68/0.6 | 0.69/0.61 | 0.65/0.62 | 0.69/0.64 | 0.69/0.65 |
+^10 | 0.67/0.6 | 0.66/0.61 | 0.68/0.62 | 0.71/0.64 | 0.7/0.65 |
+^50 | 0.64/0.58 | 0.65/0.62 | 0.65/0.63 | 0.7/0.65 | 0.72/0.66 |
+^200 | 0.6/0.57 | 0.63/0.6 | 0.67/0.63 | 0.69/0.65 | 0.72/0.68 |
+^500 | 0.6/0.58 | 0.67/0.6 | 0.69/0.63 | 0.7/0.65 | 0.71/0.67 |
 
+Conclusion: We may notice very good results on small populations and small numbers of generations. But it was accidentaly usually. Stably good results can be achived only on big populations. Number of generations doesn't affect so much on the result as the size of population. Just a few generations would be enough. Let's fix **# generations = 10, population size = 5000** for the future measurements. 
 
-Conclusion: We may notice very good results on small populations and small numbers of generations. But it is accidentaly usually. Stably good results can be achived only on big populations. Number of generations doesn't affect so much on the result as the size of population. Just a few generations would be enough. Let's fix **# generations = 10, population size = 1000 **for the future measurements.
+**Experiments with clauses/variables ratio**
 
-The size of formula (amount of clauses and variables) 
+Question: Why they say the ratio 4.3 is the hardest? 
 
+Intuition says at low ratios we have just few clauses and many assignments. It means solution can be easily found. At high ratios we have many clauses and inconsistencies is easily detected and no way to solve formula.
+
+Experiment 9. Observe unsatisfied ratio for different clauses/variables ratio. Population size is 5000, # of generations is 10, crossover rate is 0.95, mutation rate is 0.05, number of gens is 20. Instances are retrived from http://www.cs.ubc.ca/~hoos/SATLIB/benchm.html with ratio 4.3 and then generated new ones by cutting and adding new clauses (all instances can be found here https://github.com/platomik/mie-paa/tree/master/6). 
+Number of clases: 60, 66, 72, 78, 84, 90, 96, 102, 108, 114, 120, 126, 132, 138, 144, 150.
+Number of variables: 20.
+ 
+![](https://raw.github.com/platomik/mie-paa/master/6/p7.jpg)
+
+Conclusion:
+
+ 
 Parameters:
-- ratio
 - gens
-- population
-- crossover ratio
-- mutation ratio
 - strategy
-- generations
 - weight
 - rel err/unsat ratio
 
