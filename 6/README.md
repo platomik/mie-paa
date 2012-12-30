@@ -168,30 +168,34 @@ Experiment 11: Observe effect of mutation rate on the weighted fitness value. In
  
 Conclusion: Selecting a very low mutation rate leads to the population of very similar chromosomes (no evolution). Selecting a very high mutation rate leads to the scattering the population. It means valuable genes are not saved. Producing of new chromosomes has random effect. 
 The best fitness value was received for the highest crossover rate.
- 
-Parameters:
-- gens
-- strategy
-- weight
-- rel err/unsat ratio
 
+**Experiments with strategies**
+
+We are able to observe behaivor of the algorithm for different crossover strategies (single-point, two-point, uniform) and selection strategies (roulette-wheel, tournament, random),
+
+Experiment 12: Fill table of strategies by best values for fitness function:
+
+| ^single-point ^two-point ^uniform
+^roulette-wheel | 3731 | 3738 | 3813 |
+^tournament | 3804 | 3847 | 4155 |
+^random | 3772 | 3864 | 3689 |
+
+Conclusion: Tournament selection and uniform crossover is the best strategy? In fact it is not so simple and it depends on many parameters at least mutation and crossover rates, generations and population sizes. And we should notice the worst value for uniform-random strategy. Selection random strategy is recommended usually for debugging usage. 
+
+**Experiments with genes**
+
+Question: How does the number of variables effect on unsat ratio. 
+
+Experiment 13: Try to solve 100 formulas with different amount of variables {20,100,200}. Fill the table:
+
+^ratio clauses2variables \ variables: ^20 ^100 ^200
+^3.5	| 0.95 | 0.99 | 0.99 | 
+^4	| 0.8 | 0.9 | 0.93 |
+^4.5 | 0.6 | 0.3 | 0.2 |
+^5	| 0.45 | 0.1 | 0.03 |
+
+Conclusion: It may be some addition to experiment 9. It looks like for a formula with 20 variables the curve is more  flat than for a formula with 200 variables. The more variables the more strict decision if formula satisfied or not satisfied.
 
 ### Conclusions
-Does the algorithm return satisfactory solutions?
-Does the algorithm return satisfactory solutions for instances of any size? How does the error grow with the instance size?
-Does the algorithm have a sufficient iterative power? Does it converge correctly?
-Is the algorithm adequatly fast?
-Isn't there a useless time overhead? Cannot the algorithm be stopped earlier?
 
-
-
-
-Ob
-
-At low ratios: 
-−few clauses (constraints)− 
-many assignments− 
-easily found 
-•At high ratios: 
-−many clauses− 
-inconsistencies easily detected
+Genetic Algorithm was implemented and tested with many parameters. Algorithm returns satisfactory solutions but not always. The result depends on clause/variable ratio and choosen heuristic parameters. For a high ratio formulas would be more difficult to find solution than for a small ratio formulas.  Algorithm is fast enough but for big populations requires much memory, mostly because of Perl implementation. Algorithm can be stopped earlier. Thredshold function was implemented in the algorithm and stopped algorithm after just a few generations. Situation with strategies is not so obvious and more experiments should be done on that. 
