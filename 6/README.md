@@ -152,8 +152,22 @@ Number of variables: 20.
  
 ![](https://raw.github.com/platomik/mie-paa/master/6/p7.jpg)
 
-Conclusion:
+Conclusion: We may notice thredshold somewhere near ratio 4.9. It divides the curve into two parts probabilty less 50% and more 50%. This thredshold is called SAT/UNSAT thredshold. We should made more experiments with more variables in order to achieve ratio 4.3.
 
+**Experiments with crossover ratio and mutation ratio**
+
+Question: Why it is recommended use crossover rate 0.9-0.95 and mutation rate 0.05-0.10? 
+
+Experiment 10: Observe effect of crossover rate on the weighted fitness value. 
+ 
+![](https://raw.github.com/platomik/mie-paa/master/6/p8.jpg) 
+
+Experiment 11: Observe effect of mutation rate on the weighted fitness value. In this experiment population are observed. Average difference between weighted fitness values of chromosomes.
+
+![](https://raw.github.com/platomik/mie-paa/master/6/p9.jpg) 
+ 
+Conclusion: Selecting a very low mutation rate leads to the population of very similar chromosomes (no evolution). Selecting a very high mutation rate leads to the scattering the population. It means valuable genes are not saved. Producing of new chromosomes has random effect. 
+The best fitness value was received for the highest crossover rate.
  
 Parameters:
 - gens
